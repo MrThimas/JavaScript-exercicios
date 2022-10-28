@@ -1,0 +1,51 @@
+<html>
+    <head lang="pt-br">
+        <meta charset="utf-8">
+        <title>Somador</title>
+        <style>
+            .somandos{
+                background-color: black;
+                color: red;
+                width: 200px;
+                height: 150px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20pt;
+                text-align: center;
+            }
+            #res{
+                background-color: red;
+                color:black;
+                text-align: center;
+                font-size: 20pt;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 200px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="somandos">
+            <h3>|Calculadora|</h3>
+            <input type="number" id="txtn1">
+            <input type="number" id="txtn2">
+            <input type="button" value="somar" onclick="somar()">
+        </div>
+        <div id="res">
+            Resultado
+        </div>
+
+        <script>
+            function somar(){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.querySelector('input#txtn2')
+                var res = window.document.getElementById('res')
+                n1 = Number(tn1.value)
+                n2 = Number(tn2.value)
+                var s = n1 + n2
+                res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong> `
+            }
+
+        </script>
+    </body>
+</html>
